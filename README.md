@@ -1,16 +1,73 @@
-# starwars_web_app
+# Star Wars Explorer - README
 
-A new Flutter project.
+## Descripción
 
-## Getting Started
+Star Wars Explorer es una aplicación web desarrollada con Flutter que permite explorar personajes del universo de Star Wars. Utiliza la API pública SWAPI https://swapi.py4e.com/api (se utiliza el mirror link ya que la API original está caída) para obtener información detallada sobre los personajes y ofrece diversas funcionalidades como búsqueda, paginación, vista en lista o grilla, y un sistema de favoritos.
 
-This project is a starting point for a Flutter application.
+## Características principales
 
-A few resources to get you started if this is your first Flutter project:
+- 🔍 Búsqueda de personajes por nombre
+- ⭐ Marcado de personajes como favoritos
+- 📱 Diseño responsivo 
+- 📋 Vista en lista o grilla de personajes
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tecnologías utilizadas
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter
+- Bloc/Cubit (para gestión de estado)
+- Dio (para peticiones HTTP)
+- SharedPreferences (para almacenamiento local de favoritos)
+- Mockito/Bloc Test (para pruebas unitarias)
+
+## Requisitos previos
+
+- Flutter SDK (versión ^3.5.4 o superior)
+- Dart SDK (versión ^3.0.0 o superior)
+- Un editor como Visual Studio Code o Android Studio
+- Git
+
+## Instalación y ejecución
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/simonosudar/flutter-starwars-webapp.git
+cd flutter-starwars-webapp
+```
+
+### 2. Instalar dependencias
+
+```bash
+flutter pub get
+```
+
+### 3. Ejecutar la aplicación
+
+Para ejecutar en modo debug:
+
+```bash
+flutter run -d web-server --web-port=7357
+```
+
+### 4. Ejecutar tests
+
+```bash
+flutter test
+```
+
+## Estructura del proyecto
+
+```
+lib/
+├── blocs/             # BLoCs para gestión de estado
+│   └── characters/    # BLoC específico para personajes
+├── di/                # Inyección de dependencias
+├── models/            # Modelos de datos
+├── repositories/      # Repositorios para acceso a datos
+├── screens/           # Pantallas de la aplicación
+├── services/          # Servicios (API, etc.)
+├── widgets/           # Widgets reutilizables
+└── main.dart          # Punto de entrada de la aplicación
+
+test/                  # Tests unitarios y de widgets
+```
