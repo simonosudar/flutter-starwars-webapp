@@ -69,5 +69,5 @@ lib/
 ├── widgets/           # Widgets reutilizables
 └── main.dart          # Punto de entrada de la aplicación
 
-test/                  # Tests unitarios y de widgets
+test/                  # Tests unitarios y de widgets   
 ```
